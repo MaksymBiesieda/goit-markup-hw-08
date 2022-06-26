@@ -1,0 +1,122 @@
+/* Header */
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.logo {
+    color: $accent-color;
+    font-family: 'Raleway';
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+.logo--header {
+    margin-right: 93px;
+    padding: 25px 0;
+}
+
+.header__logo {
+    color: #000000;
+}
+
+.header-block {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+.nav__item {
+    position: relative;
+    padding: 32px 0;
+    &:not(:first-child) {
+            margin-left: 50px;
+        }
+}
+
+.contacts__item:not(:first-child) {
+    margin-left: 50px;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.header-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav__link {
+    padding: 32px 0;
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+            color: $accent-color;
+        }
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+    color: $accent-color;
+    }
+}
+
+.nav__link--studio {
+    color: $accent-color;
+    &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            border-radius: 2px;
+        }
+}
+
+.nav__link--portfolio {
+    color: $accent-color;
+    &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            border-radius: 2px;
+        }
+}
+
+.contacts__icon {
+    margin-right: 10px;
+    fill: $primary-text-color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .contacts__link:hover &, .contacts__link:focus & {
+            fill: $accent-color;
+        }
+}
