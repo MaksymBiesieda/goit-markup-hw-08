@@ -6,8 +6,13 @@
 
 .button-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    @media screen and (max-width: 767px) {flex-wrap: wrap;}
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {margin-bottom: 50px;}
 }
 
 .button-list__button {
@@ -46,8 +51,14 @@
         }
 }
 
-.button-list__item:not(:first-child) {
-    margin-left: 8px;
+.button-list__item {
+@media screen and (max-width: 767px) {
+        margin-right: 8px;
+        margin-bottom: 15px;}
+@media screen and (min-width: 768px) {
+    &:not(:first-child) {
+    margin-left: 8px;}
+}
 }
 
 .portfolio-list__subtitle {
@@ -56,7 +67,6 @@
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-
     margin-bottom: 4px;
 }
 
@@ -69,34 +79,46 @@
 
 .portfolio-list__card {
     padding: 20px 24px;
-    width: 370px;
+    width: 100%;
 }
 
 .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width:768px) {
+     display: flex;
+     flex-wrap: wrap;
+     margin: -15px;
+    }
+    
 }
 
 .portfolio-list__item {
-    margin-left: 30px;
-    margin-bottom: 30px;
     outline: 1px solid #EEEEEE;
-    &:nth-child(3n+1) {
-            margin-left: 0;
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
         }
-        &:nth-last-child(-n+3) {
-            margin-bottom: 0;
-        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 6 * 15px) / 3);
+        margin: 15px;
+    }
+    
 }
 
 .portfolio-list__card-overlay {
     position: relative;
     overflow: hidden;
-    width: 370px;
-
+    width: 100%;
 }
 
 .portfolio-list__overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -106,7 +128,7 @@
     line-height: 1.6;
     letter-spacing: 0.03em;
     color: $primary-background-color;
-    padding: 63px 24px;
+    padding: 77px 24px;
     transform: translateY(101%);
     transition-property: transform;
     transition-duration: 250ms;
@@ -118,6 +140,7 @@
 }
 
 .portfolio-list__link {
+    height: 100%;
     display: block;
     transition-property: box-shadow;
     transition-duration: 250ms;

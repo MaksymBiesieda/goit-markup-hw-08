@@ -18,24 +18,37 @@
 .team__title {
     color: $title-text-color;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.03em;
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {margin-bottom: 50px;
+    font-size: 36px;}
 }
 
 .team__list {
-    display: flex;
+    @media screen and (min-width: 768px) {display: flex;}
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+        margin: -15px;
+    }
 }
 
 .team__item {
     background-color: $primary-background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    &:not(:first-child) {
-            margin-left: 30px;
+    @media screen and (max-width: 767px) {&:not(:last-child) {
+        margin-bottom: 30px;}
+    }
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {&:not(:first-child) {
+            margin-left: 30px;}
         }
 }
 
@@ -44,7 +57,9 @@
 }
 
 .team__card {
-    padding: 30px 32px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    @media screen and (min-width: 1200px) {padding: 30px 32px;}
 }
 
 .team__text {
@@ -57,13 +72,16 @@
 .team__social-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 16px;
 }
 
 .team__social-item {
     width: 44px;
     height: 44px;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
 }
 
 .team__social-link {

@@ -1,11 +1,37 @@
 /* Hero */
 .hero--section {
+    padding: 118px 0;
+    @media screen and (min-width: 1200px) {
     padding: 200px 0;
+    }
 }
 
 .hero {
     background-color: #C4C4C4;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img777.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/img555.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/img555x2.jpg);
+    }
+    @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/img666.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/img666x2.jpg);
+        }
+    }
+   
+    @media screen and (min-width: 1200px) {
+             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/img777.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and (min-resolution: 2dppx) {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/img777x2.jpg);
+                }
+         }
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -18,14 +44,18 @@
 .hero__title {
     color: $primary-background-color;
     font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 30px auto;
+    max-width: 360px;
+    @media screen and (min-width: 1200px) {
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.4;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    margin: 0 auto 30px auto;
-    max-width: 700px;
+    }
 }
 
 .hero__button {
@@ -66,6 +96,7 @@
 }
 
 .modal {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,14 +105,20 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px;
-    min-width: 528px;
-    min-height: 581px;
     background: $primary-background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 2;
     .backdrop--is-hidden & {
             transform: translate(-50%, -50%) scale(0.8);
+        }
+        @media screen and (min-width: 480px) {
+         width: 450px;
+         height: 609px;
+        }
+        @media screen and (min-width: 1200px) {
+         width: 528px;
+         height: 581px;
         }
 }
 
@@ -112,12 +149,15 @@
 .modal-form__title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 
     color: $title-text-color;
+    @media screen and (min-width: 1200px) {
+    line-height: 1.2;
+    }
 }
 
 .modal-form__field {
@@ -187,21 +227,29 @@
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     cursor: pointer;
 
     color: $primary-text-color;
+    @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7
+    }
 }
 
 .modal-form__agreement {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     color: $accent-color;
     margin-left: 4px;
+    @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7;
+    }
 }
 
 .modal-form__button-send {
@@ -216,8 +264,8 @@
     letter-spacing: 0.06em;
     background: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0 transparent solid;
     border-radius: 4px;
-    border-color: transparent;
     cursor: pointer;
 
     color: $primary-background-color;

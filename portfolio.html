@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home-work-8</title>
     <link
       rel="stylesheet"
@@ -23,40 +22,102 @@
   </head>
   <body>
     <!-- Шапка -->
-    <header class="header">
+   <header class="header">
       <div class="container header-block">
         <nav class="header-nav">
-          <a class="logo logo--header link" href="/"> Web<span class="header__logo">Studio</span></a>
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="nav__link link" href="./index.html">Студия</a>
+          <a class="logo logo--header link" href="/">
+            Web<span class="header__logo">Studio</span></a>
+          <div class="nav-contacts">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--portfolio link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="nav-contacts">
+          <ul class="header-contacts list">
+            <li class="contacts__item">
+              <a class="contacts__link link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--portfolio link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link link" href="">Контакты</a>
+            <li class="contacts__item">
+              <a class="contacts__link link" href="tel:+380961111111">
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="header-contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
+        </div>
+        <button type="button" class="header__menu-open-button">
+          <svg width="40" height="40" aria-label="Открытие мобильного меню">
+            <use href="./images/icons.svg#icon-menu" class="header__menu-open-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header__menu is-hidden">
+        <div class="header__menu-container">
+          <div>
+            <button type="button" class="header__menu-close-button">
+              <svg width="40" height="40" aria-label="Закрытие мобильного меню">
+                <use href="./images/icons.svg#icon-crist" class="header__menu-close-icon"></use>
               </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+            </button>
+            <ul class="header__menu-nav-list list">
+              <li class="header__menu-nav-item">
+                <a class="header__menu-nav-link link" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="header__menu-nav-item">
+                <a class="header__menu-nav-link nav__link--menu-portfolio link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="header__menu-nav-item">
+                <a class="header__menu-nav-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="header__menu-contacts-list list">
+              <li class="header__menu-contacts-item">
+                <a class="header__menu-tel-link link" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="header__menu-contacts-item">
+                <a class="header__menu-mail-link link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="header__menu-soc-list list">
+              <li class="header__menu-soc-item">
+                <a href="/" class="header__menu-soc-link link">Instagram</a>
+              </li>
+              <li class="header__menu-soc-item">
+                <a href="/" class="header__menu-soc-link link">Twitter</a>
+              </li>
+              <li class="header__menu-soc-item">
+                <a href="/" class="header__menu-soc-link link">Facebook</a>
+              </li>
+              <li class="header__menu-soc-item">
+                <a href="/" class="header__menu-soc-link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main-studio">
@@ -87,6 +148,7 @@
                 <div class="portfolio-list__card-overlay">
                   <img
                     class="portfolio-list__img"
+                    srcset="./images/img21.jpg 1x, ./images/img21x2.jpg 2x"
                     src="./images/img21.jpg"
                     alt="Ноутбук с фотокарточками людей"
                     width="370"
@@ -108,6 +170,7 @@
                 <div class="portfolio-list__card-overlay">
                   <img
                     class="portfolio-list__img"
+                    srcset="./images/img22.jpg 1x, ./images/img22x2.jpg 2x"
                     src="./images/img22.jpg"
                     alt="Баскетболисты в борьбе за мяч"
                     width="370"
@@ -129,6 +192,7 @@
                 <div class="portfolio-list__card-overlay">
                   <img
                     class="portfolio-list__img"
+                    srcset="./images/img23.jpg 1x, ./images/img23x2.jpg 2x"
                     src="./images/img23.jpg"
                     alt="Логотип ресторана"
                     width="370"
@@ -145,10 +209,14 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-list-item">
+            <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__card-overlay">
-                  <img class="portfolio-list__img" src="./images/img24.jpg" alt="Наушники" width="370" />
+                  <img class="portfolio-list__img" 
+                  srcset="./images/img24.jpg 1x, ./images/img24x2.jpg 2x"
+                  src="./images/img24.jpg" 
+                  alt="Наушники" 
+                  width="370" />
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -164,7 +232,11 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__card-overlay">
-                  <img class="portfolio-list__img" src="./images/img25.jpg" alt="Коробочки" width="370" />
+                  <img class="portfolio-list__img" 
+                  srcset="./images/img25.jpg 1x, ./images/img25x2.jpg 2x"
+                  src="./images/img25.jpg" 
+                  alt="Коробочки" 
+                  width="370" />
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -180,7 +252,11 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__card-overlay">
-                  <img class="portfolio-list__img" src="./images/img26.jpg" alt="Монитор" width="370" />
+                  <img class="portfolio-list__img"
+                  srcset="./images/img26.jpg 1x, ./images/img26x2.jpg 2x" 
+                  src="./images/img26.jpg" 
+                  alt="Монитор" 
+                  width="370" />
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -198,6 +274,7 @@
                 <div class="portfolio-list__card-overlay">
                   <img
                     class="portfolio-list__img"
+                    srcset="./images/img27.jpg 1x, ./images/img27x2.jpg 2x"
                     src="./images/img27.jpg"
                     alt="Раскрытый журнал"
                     width="370"
@@ -219,6 +296,7 @@
                 <div class="portfolio-list__card-overlay">
                   <img
                     class="portfolio-list__img"
+                    srcset="./images/img28.jpg 1x, ./images/img28x2.jpg 2x"
                     src="./images/img28.jpg"
                     alt="Логотип в виде бирки"
                     width="370"
@@ -240,6 +318,7 @@
                 <div class="portfolio-list__card-overlay">
                   <img
                     class="portfolio-list__img"
+                    srcset="./images/img29.jpg 1x, ./images/img29x2.jpg 2x"
                     src="./images/img29.jpg"
                     alt="Человек печатает на ноутбуке"
                     width="370"
@@ -263,7 +342,8 @@
     <!-- Футер -->
      <footer class="footer">
       <div class="container footer-flex">
-        <div>
+       <div class="footer__tablet-flex">
+         <div>
           <a class="logo logo--footer link" href="/">Web<span class="footer__logo">Studio</span></a>
           <address class="footer-adress">
             <ul class="footer-adress__list list">
@@ -318,6 +398,7 @@
             </li>
           </ul>
         </div>
+       </div>
         <form class="footer-form">
           <div class="footer-form__mail">
             <label for="mail" class="footer-form__label">Подпишитесь на рассылку</label>
@@ -332,5 +413,6 @@
         </form>
       </div>
     </footer>
+  <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

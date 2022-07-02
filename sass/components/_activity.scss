@@ -1,6 +1,6 @@
 /* Activity */
 .activity {
-    display: none;
+   @media screen and (max-width: 1199px) {display: none;}
 }
 .activity__title {
     color: $title-text-color;
