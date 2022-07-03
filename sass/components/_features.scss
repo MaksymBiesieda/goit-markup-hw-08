@@ -20,7 +20,9 @@
 }
 
 .features__subtitle {
-    text-align: center;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
     color: $title-text-color;
     font-weight: 700;
     font-size: 14px;
